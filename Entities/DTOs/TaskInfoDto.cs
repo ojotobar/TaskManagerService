@@ -9,6 +9,10 @@
         public int allottedTime { get; set; }
         public int elapsedTime { get; set; }
         public bool status { get; set; }
+
+        /// <summary>
+        /// Calculated by adding elapsedTime to the start date
+        /// </summary>
         public DateTime endDate 
         {
             get
@@ -16,6 +20,10 @@
                 return startDate.AddDays(elapsedTime);
             }
         }
+
+        /// <summary>
+        /// Claculated by adding the allottedTime to the startDate
+        /// </summary>
         public DateTime dueDate 
         {
             get
@@ -23,6 +31,11 @@
                 return startDate.AddDays(allottedTime);
             }
         }
+
+        /// <summary>
+        /// Calculted by substrating allottedTime from the elapsedTime
+        /// if the status is false.
+        /// </summary>
         public int daysOverDue 
         { 
             get
@@ -32,6 +45,11 @@
                     0;
             } 
         }
+
+        /// <summary>
+        /// Calculated by substracting elapsedTime from the
+        /// allottedTime if the status is true
+        /// </summary>
         public int daysLate 
         {
             get

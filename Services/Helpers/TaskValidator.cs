@@ -3,6 +3,9 @@ using FluentValidation;
 
 namespace Services.Helpers
 {
+    /// <summary>
+    /// Task model class validator
+    /// </summary>
     public class TaskValidator : AbstractValidator<TaskEntity>
     {
         public TaskValidator()

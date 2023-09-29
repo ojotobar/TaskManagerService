@@ -5,6 +5,9 @@ using Services;
 
 namespace TaskManagerService.Extensions
 {
+    /// <summary>
+    /// Extension method for configuring services
+    /// </summary>
     public static class ServiceExtensions
     {
         public static void ConfigureLoggerService(this IServiceCollection services) =>

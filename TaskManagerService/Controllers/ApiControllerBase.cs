@@ -6,6 +6,15 @@ namespace TaskManagerService.Controllers
 {
     public class ApiControllerBase : ControllerBase
     {
+        /// <summary>
+        /// Method to process errors if the service returns
+        /// non-success result.
+        /// </summary>
+        /// <param name="baseResponse">Base response</param>
+        /// <returns>Exception details</returns>
+        /// <exception cref="NotImplementedException"></exception>
+        /// <exception cref="ApiNotFoundResponse"></exception>
+        /// <exception cref="ApiBadRequestResponse"></exception>
         [ApiExplorerSettings(IgnoreApi = true)]
         public IActionResult ProcessError(ApiBaseResponse baseResponse)
         {
